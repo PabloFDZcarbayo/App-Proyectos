@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Aplicacion_Proyectos</string>
+    <string name="et_Login">Login</string>
+    <string name="et_password">Password</string>
+    <string name="et_userName">User name</string>
+    <string name="hint_userName">User name</string>
+    <string name="et_Password">Password</string>
+    <string name="et_confirmPassword">Confirm Password</string>
+    <string name="proyectos">PROYECTOS</string>
+    <string name="add_language">Add Language</string>
+    <string name="time_in_hours_Hint">Time in hours</string>
+    <string name="time_to_be_allocated_tv">Time to be allocated</string>
+    <string name="medium_btn">Medium</string>
+    <string name="low_btn">Low</string>
+    <string name="priority_tv">Priority:</string>
+    <string name="start_date_tv">Start date:</string>
+    <string name="project_description_tv">Project description</string>
+    <string name="project_name_tv">Project name</string>
+    <string name="new_project_tv">New project</string>
+    <string name="project_details_tv">Project Details</string>
+    <string name="details_hint">Details</string>
+    <string name="language_tv">Language</string>
+    <string name="description_tv">description</string>
+    <string name="date_init_tv">date init</string>
+    <string name="create_account_btn">Create account</string>
+    <string name="create_account_tv">Create Account</string>
+</resources>

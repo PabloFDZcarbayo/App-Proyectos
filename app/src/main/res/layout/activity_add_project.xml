@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Add_Project_activity"
+    android:background="@color/light_blue">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="690dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_New_Project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_medium"
+                android:letterSpacing="0.3"
+                android:text="@string/new_project_tv"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.049" />
+
+            <EditText
+                android:id="@+id/et_Project_Name"
+                android:layout_width="267dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:fontFamily="@font/raleway_medium"
+                android:hint="@string/project_name_tv"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_New_Project"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/et_Project_Description"
+                android:layout_width="267dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="@font/raleway_medium"
+                android:hint="@string/project_description_tv"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_Project_Name"
+                app:layout_constraintVertical_bias="0.034" />
+
+
+            <TextView
+                android:id="@+id/tv_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_light"
+                android:letterSpacing="0.3"
+                android:text="@string/start_date_tv"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_Project_Description"
+                app:layout_constraintVertical_bias="0.028" />
+
+            <EditText
+                android:id="@+id/et_Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="160dp"
+                android:ems="5"
+                android:clickable="true"
+                android:inputType="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.104"
+                app:layout_constraintStart_toEndOf="@+id/tv_Date"
+                app:layout_constraintTop_toBottomOf="@+id/et_Project_Description"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/tv_Priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="128dp"
+                android:fontFamily="@font/raleway_light"
+                android:letterSpacing="0.3"
+                android:text="@string/priority_tv"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.161"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Date"
+                app:layout_constraintVertical_bias="0.045" />
+
+            <RadioGroup
+                android:id="@+id/rg_priority"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Priority">
+
+                <RadioButton
+                    android:id="@+id/btn_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/raleway_light"
+                    android:letterSpacing="0.1"
+                    android:text="@string/low_btn"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/btn_medium"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_light"
+                    android:letterSpacing="0.1"
+                    android:text="@string/medium_btn"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/btn_high"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_light"
+                    android:letterSpacing="0.1"
+                    android:text="High"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="324dp"
+                android:fontFamily="@font/raleway_light"
+                android:letterSpacing="0.3"
+                android:text="@string/time_to_be_allocated_tv"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.274"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_priority"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <EditText
+                android:id="@+id/et_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="108dp"
+                android:layout_marginBottom="60dp"
+                android:ems="10"
+                android:fontFamily="@font/raleway_medium"
+                android:hint="@string/time_in_hours_Hint"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Time"
+                app:layout_constraintVertical_bias="0.088" />
+
+            <TextView
+                android:id="@+id/tv_Language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_light"
+                android:letterSpacing="0.3"
+                android:text="Language:"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.168"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_Time"
+                app:layout_constraintVertical_bias="0.116" />
+
+            <Spinner
+                android:id="@+id/sp_Language"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.214"
+                app:layout_constraintStart_toEndOf="@+id/tv_Language"
+                app:layout_constraintTop_toBottomOf="@+id/et_Time" />
+
+            <TextView
+                android:id="@+id/tv_Detalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_light"
+                android:letterSpacing="0.3"
+                android:text="@string/project_details_tv"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Language"
+                app:layout_constraintVertical_bias="0.136" />
+
+            <EditText
+                android:id="@+id/et_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/raleway_medium"
+                android:hint="@string/details_hint"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.27"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Detalles"
+                app:layout_constraintVertical_bias="0.142" />
+
+            <Button
+                android:id="@+id/btn_Save_project"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="#bfdbf7"
+                android:fontFamily="@font/raleway_medium"
+                android:text="Save project"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

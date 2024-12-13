@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDatePicker" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <!-- Color del encabezado del DatePicker -->
+        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimaryVariant">@color/light_blue</item>
+        <item name="colorSecondary">@color/light_blue</item>
+
+        <!-- Color del botón de selección -->
+        <item name="colorAccent">@color/light_blue</item>
+
+        <!-- Color del texto del encabezado (opcional) -->
+        <item name="android:textColorPrimary">@android:color/black</item>
+         <item name="android:textColor">@android:color/black</item>
+
+        <!-- Fondo general del diálogo -->
+        <item name="android:windowBackground">@android:color/white</item>
+
+    </style>
+
+</resources>
